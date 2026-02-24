@@ -135,8 +135,19 @@
         .btn:hover { transform: translateY(-3px); background: var(--warm-beige); }
 
         section { padding: 8rem 10%; border-bottom: 1px solid var(--secondary-bg); }
-        h2 { font-size: 2.2rem; margin-bottom: 3.5rem; text-align: center; }
-        h2 span { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); padding-bottom: 5px; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-title span {
+            color: var(--accent-gold);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 8px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
         .info-grid {
             display: grid;
@@ -153,16 +164,25 @@
 
         .info-card h3 { color: var(--accent-gold); margin-bottom: 1rem; }
 
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 2rem; 
+        }
         .skill-card { 
             background: var(--secondary-bg); 
-            padding: 2rem; 
+            padding: 2.5rem 1.5rem; 
             border-radius: 15px; 
             transition: 0.3s; 
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .skill-card:hover { transform: translateY(-10px); background: #362c25; }
-        .skill-card i { color: var(--accent-gold); margin-bottom: 1rem; }
+        .skill-card:hover { transform: translateY(-10px); background: #362c25; border: 1px solid var(--accent-gold); }
+        .skill-card i { color: var(--accent-gold); margin-bottom: 1.5rem; }
+        .skill-card h4 { margin-bottom: 1rem; color: var(--warm-beige); font-size: 1.2rem; }
+        .skill-card p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
 
         .timeline {
             position: relative;
@@ -191,39 +211,49 @@
 
         .project-card {
             background: var(--secondary-bg);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 20px;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
             display: flex;
-            gap: 2rem;
-            transition: 0.3s;
+            gap: 3rem;
+            transition: 0.4s;
+            border: 1px solid rgba(198, 142, 75, 0.1);
+            align-items: flex-start;
         }
-        .project-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-        .project-tags { margin-top: 1rem; }
+        .project-card:hover { 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5); 
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+        .project-tags { margin: 1.5rem 0; display: flex; flex-wrap: wrap; gap: 10px; }
         .project-tags span { 
-            font-size: 0.75rem; 
+            font-size: 0.8rem; 
             background: rgba(198, 142, 75, 0.1);
             color: var(--accent-gold);
-            padding: 4px 12px; 
-            margin-right: 8px; 
+            padding: 5px 15px; 
             border-radius: 50px;
             border: 1px solid var(--accent-gold);
+            font-weight: 500;
         }
 
         .project-img-preview {
             width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid var(--accent-gold);
             margin-bottom: 1rem;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
+
+        .project-description b { color: var(--accent-gold); }
 
         @media (max-width: 1024px) {
             .hero { flex-direction: column-reverse; text-align: center; padding-top: 8rem; }
             .hero h1 { font-size: 2.5rem; }
             .hero h2 { text-align: center; }
             .info-grid { grid-template-columns: 1fr; }
-            .project-card { flex-direction: column; }
+            .project-card { flex-direction: column; padding: 1.5rem; }
         }
     </style>
 </head>
@@ -243,13 +273,13 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Mennatullah Mahmoud </h1>
-            <h2>Aspiring Data Engineer</h2>
+            <h2>Aspiring Data Engineer & AI Specialist</h2>
             <p>
                 Aspiring Data Engineer with strong foundations in 
                 <b>SQL, Python, and Data Analysis</b>. 
-                Experienced in building relational databases and interactive dashboards using 
-                <b>Power BI and Excel</b>. 
-                Currently learning <b>Azure Data Engineering and Data Pipelines</b> through Microsoft DEPI Scholarship.
+                Expert in building AI-driven automation workflows and interactive dashboards using 
+                <b>Power BI</b>. 
+                Currently mastering <b>Azure Data Engineering</b> through Microsoft DEPI Scholarship.
             </p>
             <a href="#projects" class="btn">View My Portfolio</a>
         </div>
@@ -267,105 +297,112 @@
     </section>
 
     <section id="about">
-        <h2>About <span>Me</span></h2>
+        <h2 class="section-title">About <span>Me</span></h2>
         <div class="info-grid">
             <div class="info-card">
                 <h3>Who I Am</h3>
                 <p>
                     I am a Statistics and Computer Science student at <b>Ain Shams University</b>.
-                    I specialize in:
-                    <ul>
-                        <li>SQL database design</li>
-                        <li>Data analysis and visualization</li>
-                        <li>Building real-world academic data projects</li>
-                    </ul>
-                    Currently enhancing my skills in Azure and Data Engineering tools.
+                    I specialize in designing scalable SQL architectures, data pipeline automation, and transforming raw data into actionable insights using AI.
                 </p>
             </div>
             <div class="info-card">
                 <h3>Current Focus</h3>
                 <p>
-                    Learning <b>Azure Data Engineering, Data Pipelines, and Big Data Processing</b> through Microsoft DEPI Scholarship to apply real-world solutions.
+                    Deepening my expertise in <b>Azure Data Engineering</b>, cloud-native ETL processes, and Generative AI integration for business automation.
                 </p>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <h2>Technical <span>Stack</span></h2>
+        <h2 class="section-title">Technical <span>Stack</span></h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <i class="fas fa-database fa-2x"></i>
+                <i class="fas fa-database fa-3x"></i>
                 <h4>Data Engineering</h4>
-                <p>
-                    SQL<br>
-                    Relational Databases<br>
-                    Database Design<br>
-                    Data Modeling<br>
-                    Normalization
-                </p>
+                <p>SQL, Data Modeling, Database Design, Normalization, ETL Concepts, Data Warehousing Fundamentals.</p>
             </div>
             <div class="skill-card">
-                <i class="fab fa-python fa-2x"></i>
+                <i class="fab fa-python fa-3x"></i>
                 <h4>Programming</h4>
+                <p>Python, API Integration, Automation Scripts, OOP, Google Colab.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-robot fa-3x"></i>
+                <h4>AI & Automation</h4>
                 <p>
-                    Python<br>
-                    OOP<br>
-                    Automation Scripts
+                    Workflow Automation (n8n, Make), Telegram AI Bots, LLM Integration (ChatGPT, Gemini), 
+                    Hugging Face, Gradio AI Apps, Google Sheets AI Integration.
                 </p>
             </div>
             <div class="skill-card">
-                <i class="fas fa-chart-line fa-2x"></i>
-                <h4>Data Analysis</h4>
+                <i class="fas fa-brain fa-3x"></i>
+                <h4>Generative AI</h4>
                 <p>
-                    Power BI<br>
-                    DAX<br>
-                    Excel<br>
-                    Data Cleaning
+                    Prompt Engineering, Custom GPTs Creation, AI Assistants Development, 
+                    NotebookLM for Research, AI Translation Systems.
                 </p>
             </div>
             <div class="skill-card">
-                <i class="fas fa-cloud fa-2x"></i>
-                <h4>Currently Learning</h4>
-                <p>
-                    Azure<br>
-                    Data Pipelines<br>
-                    Big Data Concepts
-                </p>
+                <i class="fas fa-cloud fa-3x"></i>
+                <h4>Cloud & BI</h4>
+                <p>Azure, Power BI, DAX, Data Pipelines, Looker Studio AI Dashboards.</p>
             </div>
         </div>
     </section>
 
     <section id="projects" style="background-color: #120e0c;">
-        <h2>Projects</h2>
+        <h2 class="section-title"><span>Projects</span></h2>
         
         <div class="project-card">
             <div style="flex: 1;">
-                <h3 style="color: var(--accent-gold);">Electronics Store DB System</h3>
-                <div class="project-tags"><span>SQL</span><span>OOP</span><span>EER Diagram</span></div>
+                <img src="n8n.png" alt="Real Estate AI Automation" class="project-img-preview">
+                <h3 style="color: var(--accent-gold);">Real Estate AI Customer Agent</h3>
+                <div class="project-tags">
+                    <span>n8n</span>
+                    <span>Google Gemini</span>
+                    <span>Automation</span>
+                    <span>MySQL</span>
+                </div>
             </div>
-            <div style="flex: 2;">
+            <div style="flex: 2;" class="project-description">
                 <p>
-                    Designed and implemented a relational database system for an online electronics store.<br>
-                    • Created EER diagram<br>
-                    • Applied normalization<br>
-                    • Built SQL queries<br>
-                    • Generated sales and inventory reports
+                    <b>Overview:</b><br>
+                    Built an end-to-end intelligent automation system to handle real estate inquiries 24/7, reducing response lag and capturing high-quality leads.
+                    <br><br>
+                    <b>Key Contributions:</b><br>
+                    • Developed an AI Agent using <b>n8n</b> and <b>Google Gemini</b> for property recommendations.<br>
+                    • Automated data capture from <b>Telegram</b> directly into <b>MySQL</b>.<br>
+                    • Implemented logic to filter customer intent, providing a human-like experience.
                 </p>
+                <a href="#" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+                    <i class="fas fa-code-branch"></i> View Workflow
+                </a>
             </div>
         </div>
 
         <div class="project-card">
             <div style="flex: 1;">
-                <img src="p1.png" alt="Sales Dashboard Preview" class="project-img-preview">
-                <h3 style="color: var(--accent-gold);">Interactive Sales Dashboard</h3>
-                <div class="project-tags"><span>Power BI</span><span>DAX</span><span>Data Cleaning</span></div>
+                <img src="photo.png" alt="Electronics Store Database Preview" class="project-img-preview">
+                <h3 style="color: var(--accent-gold);">Electronics Store Database System</h3>
+                <div class="project-tags">
+                    <span>SQL</span>
+                    <span>Database Design</span>
+                    <span>Normalization</span>
+                </div>
             </div>
-            <div style="flex: 2;">
+            <div style="flex: 2;" class="project-description">
                 <p>
-                    Created a multi-page Power BI dashboard providing actionable insights into shipping logistics and key performance metrics, enabling data-driven decision making.
+                    <b>Overview:</b><br>
+                    Designed a fully structured relational database for an online electronics store to manage customers, orders, and inventory.
+                    <br><br>
+                    <b>Key Contributions:</b><br>
+                    • Designed <b>EER Diagram</b> and applied <b>3NF Normalization</b>.<br>
+                    • Implemented the database using <b>SQL</b> with complex constraints.<br>
+                    • Wrote advanced queries for Sales performance and Inventory tracking.
                 </p>
-                <a href="https://github.com/mennamahmoud9090/Sales-Analysis-PowerBI" target="_blank" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+                <a href="https://github.com/mennamahmoud9090/Electronics-Database/tree/main" target="_blank" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
                     <i class="fab fa-github"></i> View Project
                 </a>
             </div>
@@ -373,7 +410,7 @@
     </section>
 
     <section id="courses">
-        <h2>Education & <span>Certifications</span></h2>
+        <h2 class="section-title">Education & <span>Certifications</span></h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-date">2023 - 2027</div>
@@ -383,25 +420,20 @@
             <div class="timeline-item">
                 <div class="timeline-date">Ongoing</div>
                 <h4>Microsoft Data Engineer Scholarship (DEPI)</h4>
-                <p>Azure, Big Data Processing, and Data Pipelines.</p>
+                <p>Mastering Azure Data Factory, Databricks, and Synapse Analytics.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">2025 - 2026</div>
                 <h4>AI Ambassadors & Leadership (NTI)</h4>
                 <p>Advanced training in ML, Deep Learning, and Generative AI (80+ Hours).</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">2023 - 2025</div>
-                <h4>Vice Head @ ACS Ain Shams</h4>
-                <p>Led student workshops, event planning, and team coordination.</p>
-            </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Get In <span>Touch</span></h2>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
         <div style="text-align: center;">
-            <p style="margin-bottom: 2rem; color: var(--text-dim);">I am actively seeking internship opportunities in Data Engineering and Data Analysis.</p>
+            <p style="margin-bottom: 2rem; color: var(--text-dim);">Open for internships and collaborative data/AI projects.</p>
             <a href="mailto:mennamahmoud119990@gmail.com" class="btn">Send Me an Email</a>
             <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem;">
                 <a href="https://www.linkedin.com/in/mennamahmoud119990/" target="_blank" style="color: var(--accent-gold); font-size: 2rem;"><i class="fab fa-linkedin"></i></a>
@@ -411,7 +443,7 @@
     </section>
 
     <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--secondary-bg); font-size: 0.9rem; color: var(--text-dim);">
-        &copy; 2026 Mennatullah Mahmoud Saleh | Built with Precision.
+        &copy; 2026 Mennatullah Mahmoud Saleh | Built with Data Precision & AI.
     </footer>
 
 </body>
