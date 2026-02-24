@@ -199,6 +199,7 @@
             transition: 0.3s;
         }
         .project-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .project-tags { margin-top: 1rem; }
         .project-tags span { 
             font-size: 0.75rem; 
             background: rgba(198, 142, 75, 0.1);
@@ -207,6 +208,14 @@
             margin-right: 8px; 
             border-radius: 50px;
             border: 1px solid var(--accent-gold);
+        }
+
+        .project-img-preview {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 1px solid var(--accent-gold);
+            margin-bottom: 1rem;
         }
 
         @media (max-width: 1024px) {
@@ -328,7 +337,7 @@
     </section>
 
     <section id="projects" style="background-color: #120e0c;">
-        <h2>Selected <span>Projects</span></h2>
+        <h2>Projects</h2>
         
         <div class="project-card">
             <div style="flex: 1;">
@@ -348,6 +357,7 @@
 
         <div class="project-card">
             <div style="flex: 1;">
+                <img src="p1.png" alt="Sales Dashboard Preview" class="project-img-preview">
                 <h3 style="color: var(--accent-gold);">Interactive Sales Dashboard</h3>
                 <div class="project-tags"><span>Power BI</span><span>DAX</span><span>Data Cleaning</span></div>
             </div>
@@ -355,6 +365,9 @@
                 <p>
                     Created a multi-page Power BI dashboard providing actionable insights into shipping logistics and key performance metrics, enabling data-driven decision making.
                 </p>
+                <a href="https://github.com/mennamahmoud9090/Sales-Analysis-PowerBI" target="_blank" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+                    <i class="fab fa-github"></i> View Project
+                </a>
             </div>
         </div>
     </section>
