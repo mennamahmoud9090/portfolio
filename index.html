@@ -178,6 +178,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 1px solid transparent;
         }
         .skill-card:hover { transform: translateY(-10px); background: #362c25; border: 1px solid var(--accent-gold); }
         .skill-card i { color: var(--accent-gold); margin-bottom: 1.5rem; }
@@ -303,7 +304,7 @@
                 <h3>Who I Am</h3>
                 <p>
                     I am a Statistics and Computer Science student at <b>Ain Shams University</b>.
-                    I specialize in designing scalable SQL architectures, data pipeline automation, and transforming raw data into actionable insights using AI.
+                    I specialize in designing scalable SQL architectures, data pipeline automation, and transforming raw data into actionable insights.
                 </p>
             </div>
             <div class="info-card">
@@ -321,7 +322,7 @@
             <div class="skill-card">
                 <i class="fas fa-database fa-3x"></i>
                 <h4>Data Engineering</h4>
-                <p>SQL, Data Modeling, Database Design, Normalization, ETL Concepts, Data Warehousing Fundamentals.</p>
+                <p>SQL, Data Modeling, Database Design, ETL Concepts, Data Warehousing Fundamentals.</p>
             </div>
             <div class="skill-card">
                 <i class="fab fa-python fa-3x"></i>
@@ -331,18 +332,12 @@
             <div class="skill-card">
                 <i class="fas fa-robot fa-3x"></i>
                 <h4>AI & Automation</h4>
-                <p>
-                    Workflow Automation (n8n, Make), Telegram AI Bots, LLM Integration (ChatGPT, Gemini), 
-                    Hugging Face, Gradio AI Apps, Google Sheets AI Integration.
-                </p>
+                <p>Workflow Automation (n8n, Make), Telegram AI Bots, LLM Integration (ChatGPT, Gemini), Gradio AI Apps.</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-brain fa-3x"></i>
                 <h4>Generative AI</h4>
-                <p>
-                    Prompt Engineering, Custom GPTs Creation, AI Assistants Development, 
-                    NotebookLM for Research, AI Translation Systems.
-                </p>
+                <p>Prompt Engineering, Custom GPTs, AI Assistants, NotebookLM Research, AI Translation Systems.</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-cloud fa-3x"></i>
@@ -369,12 +364,12 @@
             <div style="flex: 2;" class="project-description">
                 <p>
                     <b>Overview:</b><br>
-                    Built an end-to-end intelligent automation system to handle real estate inquiries 24/7, reducing response lag and capturing high-quality leads.
+                    Built an intelligent automation system to handle inquiries 24/7, reducing response lag and capturing high-quality leads.
                     <br><br>
                     <b>Key Contributions:</b><br>
                     • Developed an AI Agent using <b>n8n</b> and <b>Google Gemini</b> for property recommendations.<br>
-                    • Automated data capture from <b>Telegram</b> directly into <b>MySQL</b>.<br>
-                    • Implemented logic to filter customer intent, providing a human-like experience.
+                    • Automated data capture from <b>Telegram</b> interactions directly into <b>MySQL</b>.<br>
+                    • Implemented intent filtering for human-like interaction experience.
                 </p>
                 <a href="#" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
                     <i class="fas fa-code-branch"></i> View Workflow
@@ -390,19 +385,47 @@
                     <span>SQL</span>
                     <span>Database Design</span>
                     <span>Normalization</span>
+                    <span>EER Modeling</span>
                 </div>
             </div>
             <div style="flex: 2;" class="project-description">
                 <p>
                     <b>Overview:</b><br>
-                    Designed a fully structured relational database for an online electronics store to manage customers, orders, and inventory.
+                    Designed and developed a relational database for an online electronics store to manage customers, orders, and inventory.
                     <br><br>
                     <b>Key Contributions:</b><br>
-                    • Designed <b>EER Diagram</b> and applied <b>3NF Normalization</b>.<br>
-                    • Implemented the database using <b>SQL</b> with complex constraints.<br>
-                    • Wrote advanced queries for Sales performance and Inventory tracking.
+                    • Designed an <b>EER Diagram</b> and applied <b>Normalization (3NF)</b>.<br>
+                    • Implemented constraints and relationships using <b>SQL</b>.<br>
+                    • Wrote advanced queries to generate reports on Sales and Inventory.
                 </p>
                 <a href="https://github.com/mennamahmoud9090/Electronics-Database/tree/main" target="_blank" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+                    <i class="fab fa-github"></i> View Project
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div style="flex: 1;">
+                <img src="p1.png" alt="Sales Dashboard Preview" class="project-img-preview">
+                <h3 style="color: var(--accent-gold);">Sales Performance Dashboard</h3>
+                <div class="project-tags">
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Data Cleaning</span>
+                    <span>Visualization</span>
+                </div>
+            </div>
+            <div style="flex: 2;" class="project-description">
+                <p>
+                    <b>Overview:</b><br>
+                    Developed an interactive Power BI dashboard to analyze sales performance and logistics operations.
+                    <br><br>
+                    <b>Key Contributions:</b><br>
+                    • Cleaned and transformed data using <b>Power Query</b>.<br>
+                    • Built a structured <b>data model</b> and calculated measures using <b>DAX</b>.<br>
+                    • Designed interactive visuals for Revenue, Profit Margin, and Trend tracking.
+                </p>
+                <a href="https://github.com/mennamahmoud9090/Sales-Analysis-PowerBI" target="_blank" class="btn" style="margin-top: 1.5rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">
                     <i class="fab fa-github"></i> View Project
                 </a>
             </div>
